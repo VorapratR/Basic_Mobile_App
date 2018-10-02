@@ -7,12 +7,18 @@ import { DetailPage } from '../detail/detail';
   templateUrl: 'home.html'
 })
 export class HomePage {
-
+  id:any;
+  pass:any;
   constructor(public navCtrl: NavController) {
 
   }
   next(){
-    this.navCtrl.push(DetailPage)
+    if(this.id =="vr" && this.pass == "123"){
+      this.navCtrl.push(DetailPage);
+    }else {
+      alert("Username and Password unknow!!!");
+    }
+    
   }
 
 }
